@@ -2,17 +2,18 @@ import React from "react";
 
 export default function OurTeam() {
   const team = [
-    {
-      name: "Amit Raj",
-      role: "Founder & Full Stack Developer",
-      image: "https://randomuser.me/api/portraits/men/46.jpg",
-      desc: "Passionate about building green innovation platforms and scalable web applications.",
-    },
+   
     {
       name: "Subhendra",
       role: "UI/UX Designer",
       image: "https://randomuser.me/api/portraits/men/30.jpg",
       desc: "Designs clean and user-friendly interfaces to help innovators easily submit, track, and manage sustainable ideas on the platform.",
+    },
+     {
+      name: "Amit Raj",
+      role: "Founder & Full Stack Developer",
+      image: "https://avatars.githubusercontent.com/u/170423200?s=400&u=aaa6acdb359367af4650b45ebd64091c339749bc&v=4",
+      desc: "Passionate about building green innovation platforms and scalable web applications.",
     },
     {
       name: "Anshu Kumar",
