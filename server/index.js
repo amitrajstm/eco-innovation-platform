@@ -21,7 +21,7 @@ mongoose
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/ideas", require("./routes/ideaRoutes"));
 app.use((req,res)=>{
-  res.send("Welcome to EcoNexus!. EcoNexus server running!")
+  res.status(404).send("404 Page not Found! Welcome To EcoNexus!.")
 })
 
 app.listen(port, () => console.log(`Server running on :${port}`));
