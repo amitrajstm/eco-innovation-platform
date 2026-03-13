@@ -143,22 +143,30 @@ animate-[fade_0.6s_ease]
 
           {/* BUTTON */}
 
-          <button
+         <button
             disabled={loading}
-            className="
-w-full
-mt-6
-bg-green-500 hover:bg-green-600
-p-3
-rounded-xl
-font-semibold
-shadow-lg
-transition
-"
+          className="
+            w-full
+            mt-6
+            bg-green-500 hover:bg-green-600
+            p-3
+            rounded-xl
+            font-semibold
+            shadow-lg
+            transition
+            disabled:opacity-60
+            flex items-center justify-center gap-2
+            "
           >
-            {loading ? "Creating Account..." : "Register"}
-          </button>
-
+          {loading ? (
+            <>
+                <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
+                Creating Account...
+            </>
+          ) : (
+              "Register"
+        )}
+      </button>
           {/* LOGIN */}
 
           <p className="text-center mt-6 text-sm">
