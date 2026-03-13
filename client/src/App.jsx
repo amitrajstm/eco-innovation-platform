@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,6 +36,7 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+       <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </BrowserRouter>
