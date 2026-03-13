@@ -11,17 +11,21 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
     try {
       const res = await api.post("/auth/login", { email, password });
       login(res.data.token);
-
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid credentials");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -165,6 +169,7 @@ opacity-80
           {/* LOGIN BUTTON */}
 
           <button
+            disabled={loading}
             className="
 w-full
 bg-green-500 hover:bg-green-600
@@ -173,9 +178,18 @@ rounded-xl
 font-semibold
 shadow-lg
 transition
+disabled:opacity-60
+flex justify-center items-center gap-2
 "
           >
-            Login
+            {loading ? (
+              <>
+                <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
+                Logging in...
+              </>
+            ) : (
+              "Login"
+            )}
           </button>
 
           {/* REGISTER */}
