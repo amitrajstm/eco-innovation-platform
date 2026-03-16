@@ -109,12 +109,22 @@ export default function Home() {
                 Get Started 🚀
               </button>
             )}
-            <button
-              onClick={() => navigate("/dashboard")}
-              className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
-            >
-              Explore Dashboard
-            </button>
+            {!user && (
+              <button
+                onClick={() => navigate("/login")}
+                className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
+              >
+                Explore Dashboard
+              </button>
+            )} 
+            {user && (
+              <button
+                onClick={() => navigate("/login")}
+                className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
+              >
+                Explore Dashboard
+              </button>
+            )}
           </div>
         </div>
       </section>
