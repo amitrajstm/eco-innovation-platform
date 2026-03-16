@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import Dashboard from "./pages/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
 import SubmitIdea from "./pages/SubmitIdea";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import OurTeam from "./pages/OurTeam";
