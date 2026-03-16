@@ -119,7 +119,7 @@ export default function Home() {
             )} 
             {user && (
               <button
-                onClick={() => navigate("/login")}
+                onClick={() => navigate("/dashboard")}
                 className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
               >
                 Explore Dashboard
